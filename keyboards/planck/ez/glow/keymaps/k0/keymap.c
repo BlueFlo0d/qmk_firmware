@@ -112,7 +112,7 @@ void keyboard_post_init_user(void) {
 }
 
 #define COLOR0 {0, 0, 0}
-#define COLOR1 {147, 127, 255}
+#define COLOR1 {147, 200, 255}
 #define COLOR2 {0, 0, 255}
 
 const uint8_t PROGMEM ledmap[][DRIVER_LED_TOTAL][3] = {
