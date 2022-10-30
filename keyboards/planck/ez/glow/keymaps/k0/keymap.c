@@ -97,9 +97,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 const key_override_t paren_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_LPRN, KC_COLON);
-const key_override_t enter_key_override = ko_make_basic(MOD_MASK_CTRL, KC_M, KC_ENTER);
-const key_override_t del_key_override = ko_make_basic(MOD_MASK_CTRL, KC_H, KC_BSPC);
-const key_override_t m_del_key_override = ko_make_basic(MOD_MASK_ALT, KC_H, LALT(KC_BSPC));
+const key_override_t enter_key_override = ko_make_with_layers_and_negmods(MOD_MASK_CTRL, KC_M, KC_ENTER, ~0, ~MOD_MASK_CTRL);
+const key_override_t del_key_override = ko_make_with_layers_and_negmods(MOD_MASK_CTRL, KC_H, KC_BSPC, ~0, ~MOD_MASK_CTRL);
+const key_override_t m_del_key_override = ko_make_with_layers_and_negmods(MOD_MASK_ALT, KC_H, LALT(KC_BSPC), ~0, ~MOD_MASK_ALT);
 
 const key_override_t **key_overrides = (const key_override_t *[]){
   &paren_key_override,
