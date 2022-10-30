@@ -111,13 +111,15 @@ void keyboard_post_init_user(void) {
   rgb_matrix_enable();
 }
 
-#define COLOR1 {0, 0, 255}
+#define COLOR0 {0, 0, 0}
+#define COLOR1 {147, 255, 255}
+#define COLOR2 {0, 0, 255}
 
 const uint8_t PROGMEM ledmap[][DRIVER_LED_TOTAL][3] = {
-  [0] = { COLOR1, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, COLOR1,
-          COLOR1, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, COLOR1, COLOR1,
-          COLOR1, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, COLOR1, COLOR1, COLOR1, COLOR1,
-          COLOR1, {0,0,0}, {0,0,0}, COLOR1, COLOR1, COLOR1, COLOR1, COLOR1, {0,0,0}, {0,0,0}, COLOR1},
+  [0] = { COLOR1, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR1,
+          COLOR1, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR1, COLOR1,
+          COLOR1, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR1, COLOR1, COLOR1, COLOR1,
+          COLOR1, COLOR0, COLOR0, COLOR1, COLOR1, COLOR2, COLOR1, COLOR1, COLOR0, COLOR0, COLOR1},
 
     [1] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
 
