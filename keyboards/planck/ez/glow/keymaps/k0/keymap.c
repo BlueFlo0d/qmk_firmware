@@ -152,8 +152,11 @@ void set_layer_color(int layer) {
 
 void rgb_matrix_indicators_user(void) {
   if (keyboard_config.disable_layer_led) { return; }
+  if(!rgb_matrix_config.enable) {
+    rgb_matrix_set_color_all(0, 0, 0);
+    return;
+  }
   switch (biton32(layer_state)) {
-    if(!rgb_matrix_config.enable) goto default;
     case 0:
       set_layer_color(0);
       break;
