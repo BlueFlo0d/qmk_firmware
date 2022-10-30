@@ -152,7 +152,7 @@ void set_layer_color(int layer) {
 
 void rgb_matrix_indicators_user(void) {
   if (keyboard_config.disable_layer_led) { return; }
-  if(!rgb_matrix_config.enable) {
+  if (rgb_matrix_get_flags() == LED_FLAG_NONE) {
     rgb_matrix_set_color_all(0, 0, 0);
     return;
   }
@@ -169,9 +169,6 @@ void rgb_matrix_indicators_user(void) {
     case 3:
       set_layer_color(3);
       break;
-   default:
-      rgb_matrix_set_color_all(0, 0, 0);
-    break;
   }
 }
 
